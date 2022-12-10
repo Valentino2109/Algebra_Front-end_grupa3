@@ -1,0 +1,75 @@
+div {
+    border: solid 10px white;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 10%;
+    width: 200px;
+    height: 200px;
+    animation-name: top, right, bottom, left;
+    animation-duration: 2s, 2s, 2s, 2s;
+    animation-delay: 0s, 2s, 4s, 6s;
+    animation-iteration-count: 1, 1, 1, 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+h1 {
+    text-align: center;
+    line-height: 140px;
+    animation-name: text;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 8s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes top {
+    from {
+		border-top-color: white;
+	}
+	to {
+		border-top-color: black;
+	}
+}
+
+@keyframes right {
+    from
+    {
+        border-right-color: white;
+    }
+    to {
+        border-right-color: black;
+    }
+}
+@keyframes bottom {
+    from
+    {
+        border-bottom-color: white;
+    }
+    to {
+        border-bottom-color: black;
+    }
+}
+@keyframes left {
+    from
+    {
+        border-left-color: white;
+    }
+    to {
+        border-left-color: black;
+    }
+}
+
+@keyframes text {
+    from {
+        color: black;
+    }
+    to {
+        color: white;
+    }
+    
+}

@@ -1,0 +1,13 @@
+h1 {
+   text-align: center;
+   font-size: 60px;
+}
+
+p {
+   font-weight: bold;
+   font-style: italic;
+}
+
+body {
+   background-color: rgba(83, 255, 106, 0.8)
+}

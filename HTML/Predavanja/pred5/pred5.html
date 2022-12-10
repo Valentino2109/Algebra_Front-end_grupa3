@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG</title>
+  </head>
+  <body>
+    <a href="./index.html">Vrati se na pocetnu stranicu</a><br /><br />
+    <h3>SVG primjer</h3>
+    <svg height="130" width="500">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop
+            offset="0%"
+            style="stop-color: rgb(255, 255, 0); stop-opacity: 1"
+          />
+          <stop
+            offset="100%"
+            style="stop-color: rgb(255, 0, 0); stop-opacity: 1"
+          />
+        </linearGradient>
+      </defs>
+      <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+      <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">
+        SVG
+      </text>
+      Sorry, your browser does not support inline SVG.
+    </svg>
+    <br />
+    <!--U canvasu se crta pomocu Javascripta-->
+    <h3>Canvas primjer</h3>
+    <canvas
+      id="myCanvas1"
+      width="200"
+      height="100"
+      style="border: 1px solid #000000"
+    >
+    </canvas>
+    <script>
+      var c = document.getElementById("myCanvas1");
+      var ctx = c.getContext("2d");
+      kriz(-15, 7);
+      function kriz(odmakX, odmakY) {
+        ctx.moveTo(0 + odmakX, 0 + odmakY);
+        ctx.lineTo(200 + odmakX, 100 + odmakY);
+        ctx.moveTo(200 + odmakX, 0 + odmakY);
+        ctx.lineTo(0 + odmakX, 100 + odmakY);
+        ctx.stroke();
+      }
+    </script>
+    <br />
+    <!--U canvasu se crta pomocu Javascripta-->
+
+    <!--Crtanje sinusoide-->
+    <canvas
+      id="myCanvas2"
+      width="200"
+      height="100"
+      style="border: 5px solid #a1d64c"
+    >
+    </canvas>
+    <script>
+      var c = document.getElementById("myCanvas2");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.strokeStyle = "#FF0000";
+      ctx.moveTo(0, 50);
+      ctx.lineTo(200, 50);
+      ctx.stroke();
+      ctx.arc(50, 50, 50, 0, Math.PI);
+      ctx.arc(150, 50, 50, Math.PI, 2 * Math.PI);
+      ctx.stroke();
+    </script>
+    <!--Crtanje sinusoide-->
+    <br /><br /><br />
+    <h3>Razlike</h3>
+    <table>
+      <tr>
+        <td><h4>Canvas</h4></td>
+        <td><h4>SVG</h4></td>
+      </tr>
+      <tr>
+        <td>
+          Resolution dependent <br />
+          No support for event handlers <br />
+          Poor text rendering capabilities <br />
+          You can save the resulting image as .png or .jpg <br />
+          Well suited for graphic-intensive games
+        </td>
+        <td>
+          Resolution independent <br />
+          Support for event handlers <br />
+          Best suited for applications with large rendering areas (Google Maps)
+          <br />
+          Slow rendering if complex (anything that uses the DOM a lot will be
+          slow) <br />
+          Not suited for game applications
+        </td>
+      </tr>
+    </table>
+    <h3>Audio</h3>
+    <audio controls  preload="metadata">
+      <source src="./multimedia/03. The Vengeful One.flac" type="audio/flac" />
+    </audio><br>
+    <!--Video-->
+    <h3>The video element</h3>
+
+<video width="400" controls preload="metadata" poster="./multimedia/Skull_ffdp.jpg">
+  <source src="./multimedia/FFDP-Wash It All Away.mp4" type="video/mp4">
+
+</video>
+    <!--Video-->
+
+</body>
+</html>
+  </body>
+</html>

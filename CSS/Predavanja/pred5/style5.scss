@@ -1,0 +1,39 @@
+$itemHeight: 80px;
+
+@mixin flex-cont($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-around;
+}
+
+
+@mixin flex-item() {
+    &>div {
+        background-color: green;
+        border: solid 5px red;
+        height: $itemHeight;
+        width: 200px;
+        text-align: center;
+        line-height: $itemHeight;
+    &:nth-child(3) {
+    order: 1;
+        }   
+    }
+
+}
+
+
+h1 {
+    font-size: x-large;
+    color: red;
+}
+
+.main-div {
+    @include flex-cont(row-reverse);
+    @include flex-item();
+}
+
+.second-div {
+    @include flex-cont(row);
+    @include flex-item();
+}

@@ -1,0 +1,19 @@
+body {
+    background-color: #e1eeee;
+}
+
+h1,h2,h3 {
+    text-align: center;
+    color: #66BFBF;
+}
+
+.Profilna {
+    width: 200px;
+}
+
+hr {
+    border: dotted #66BFBF 10px;
+    border-bottom: none;
+    width: 20%;
+    margin: 30px auto;
+    }

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    /* justify-content: center; */
+
+
+}
+
+.item {
+    border: 2px dashed greenyellow;
+    height: 100px;
+    width: 21%;
+    background-color: rgb(204, 96, 96);
+    text-align: center;
+    margin: 2%;
+    line-height: 100px;
+}

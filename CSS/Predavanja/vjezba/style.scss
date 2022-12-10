@@ -1,0 +1,148 @@
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 2%;
+    font-size: 30px;
+    div {
+        border: solid 2px black;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        background-color: orange;
+    }
+    .div1 {
+        animation-name: div1;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+    .div2 {
+        animation-name: div2;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+    .div3 {
+        animation-name: div3;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
+    }
+    .div4 {
+        animation-name: div4;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
+    }
+    .div5 {
+        animation-name: div5;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
+    }
+    .div6:hover {
+        animation-name: div6;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
+    }
+}
+
+
+
+
+
+@keyframes div1 {
+    from {
+    background-color: orange;
+    }
+    to {
+    background-color: red;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+}
+}
+
+@keyframes div2 {
+    from {}
+    to {
+    margin-top: 200px;
+    transform: rotate(360deg);
+}
+}
+
+@keyframes div3 {
+    0% {
+        transform: rotate(0deg);
+        border-radius: 50%;
+    }
+    25% {
+        transform: rotate(90deg);
+        border-radius: 50%;
+    }
+    50% {
+        transform: rotate(180deg);
+        border-radius: 0%;
+    }
+    75% {
+        transform: rotate(270deg);
+        border-radius: 50%;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+}
+
+@keyframes div4 {
+    0% {}
+    50% {
+        margin-top: -1%;
+    }
+    100% {
+        margin-top: 0%;
+    }
+}
+
+@keyframes div5 {
+    0% {}
+    25% {
+    margin-top: 200px;
+    transform: rotate(0deg);
+    background-color: orange;
+    }
+    50% {
+        margin-top: 200px;
+        transform: rotate(360deg);
+        background-color: red;
+    }
+    75% {
+        margin-top: 200px;
+        transform: rotate(0deg);
+        background-color: orange;
+    }
+    100% {}
+}
+
+@keyframes div6 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

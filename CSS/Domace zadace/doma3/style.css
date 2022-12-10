@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    background-color: rgb(215, 250, 217);
+    justify-content: center;
+}
+
+.item {
+    color: white;
+    border: solid 5px rgb(59, 89, 187);
+    background-color: rgb(119, 135, 187);
+    border-radius: 10px;
+    font-size: 30px;
+    width: 33%;
+    padding: 0 10px;
+
+}

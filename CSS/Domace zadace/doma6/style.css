@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    background-color: orange;
+    margin: 10px;
+    height: 30px;
+    width: 20%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.item:hover {
+    background-color: rgb(255, 137, 1);
+    border-radius: 50px;
+    color: white;
+}

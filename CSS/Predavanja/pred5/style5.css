@@ -1,0 +1,38 @@
+h1 {
+  font-size: x-large;
+  color: red;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.main-div > div {
+  background-color: green;
+  border: solid 5px red;
+  height: 80px;
+  width: 200px;
+  text-align: center;
+  line-height: 80px;
+}
+.main-div > div:nth-child(3) {
+  order: 1;
+}
+
+.second-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.second-div > div {
+  background-color: green;
+  border: solid 5px red;
+  height: 80px;
+  width: 200px;
+  text-align: center;
+  line-height: 80px;
+}
+.second-div > div:nth-child(3) {
+  order: 1;
+}/*# sourceMappingURL=style5.css.map */

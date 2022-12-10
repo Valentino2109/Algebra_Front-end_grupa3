@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Homework</title>
+    <link rel="icon" href="./number-3.png" />
+  </head>
+  <body>
+    <a href="../index.html" id="homepage-arrow">
+      <img src="./curve-arrow.png" alt="Strelica" width="20px" /> Back to the
+      homepage</a
+    ><br />
+    <h1>Many, many inputs</h1>
+    <!--Text-->
+    <h3>Text input</h3>
+    <form
+      action="https://www.google.com"
+      enctype="multipart/form-data"
+      autocomplete="off"
+      method="get"
+    >
+      <label for="inp_text">Write something:</label><br />
+      <input type="text" id="inp_text" name="First name" /><br />
+      <input type="password" name="password" id="inp_text" />
+      <input type="submit" />
+      <input type="reset" />
+    </form>
+    <!--Text-->
+    <hr />
+    <br />
+    <!--Radio-->
+    <h3>Radio input</h3>
+    <input type="radio" id="radio" name="radio_button" />
+    <label for="radio">First button</label><br />
+    <input type="radio" id="radio" name="radio_button" />
+    <label for="radio">Second button</label>
+    <!--Radio-->
+    <hr />
+    <br />
+    <!--Checkbox input-->
+    <h3>Checkbox input</h3>
+    <input type="checkbox" id="checkbox" name="check" />
+    <label for="checkbox">First</label><br />
+    <input type="checkbox" id="checkbox" name="check" />
+    <label for="checkbox">Second</label>
+    <!--Checkbox input-->
+    <hr />
+    <br />
+    <!--Button input-->
+    <h3>Button input</h3>
+    <input
+      type="button"
+      onclick="alert('You just clicked the button!');"
+      value="If you press it, something will happen through Javascript!"
+    />
+    <!--Button input-->
+    <hr />
+    <br />
+    <!--Color input-->
+    <h3>Color input</h3>
+    <label for="color_pick">Pick you color:</label>
+    <input type="color" id="color_pick" name="color" value="#ff0000" />
+    <!--Color input-->
+    <hr />
+    <br />
+    <!--Date input-->
+    <h3>Date input</h3>
+    <input type="date" /><br />
+    <input type="datetime-local" />
+    <!--Date input-->
+    <hr />
+    <br />
+    <!--Email input-->
+    <h3>Email input</h3>
+    <form action="https://www.google.com">
+      <label for="email">Enter your email:</label><br />
+      <input type="email" id="email" name="email" />
+      <input type="submit" name="email" id="email" value="Submit this email" />
+    </form>
+    <!--Email input-->
+    <hr />
+    <br />
+    <!--Type input-->
+    <h3>Type input</h3>
+    <p>Image can be turned into a submit button</p>
+    <input
+      type="image"
+      src="https://marmelab.com/images/blog/ascii-art-converter/homer.png"
+      alt="submit"
+      width="200px"
+    />
+    <br />
+    <label for="file">Select a file:</label>
+    <input type="file" id="file" /><br /><br />
+    <form action="https://www.google.com">
+      <label for="hidtext">Write something:</label>
+      <input type="text" id="hidtext" autocomplete="off" />
+      <input type="hidden" id="hidtext" value="Hidden_content" />
+      <input type="submit" value="Press this" /><br />
+    </form>
+    <input type="month" /><br />
+    <input type="number" min="5" max="9" /><br />
+    <input type="range" min="14" max="76" /><br />
+    <p>Search</p>
+    <form>
+      <label for="gsearch">Search Google:</label>
+      <input type="search" id="gsearch" name="gsearch" />
+    </form>
+    <p>Telephone</p>
+    <form>
+      <label for="phone">Enter your phone number:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+      />
+    </form>
+    <p>Time</p>
+    <form>
+      <label for="appt">Select a time:</label>
+      <input type="time" id="appt" name="appt" />
+    </form>
+    <p>URL</p>
+    <form>
+      <label for="homepage">Add your homepage:</label>
+      <input type="url" id="homepage" name="homepage" />
+    </form>
+    <p>Week</p>
+    <form>
+      <label for="week">Select a week:</label>
+      <input type="week" id="week" name="week" />
+    </form>
+    <!--Type input-->
+  </body>
+</html>

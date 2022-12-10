@@ -1,0 +1,73 @@
+@import './base/colors';
+@import './base/reset';
+@import './abstracts/mixins';
+
+
+
+
+body
+    {
+        background-image:url(./blur-clean.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+#container {
+    display: $disFlex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-top: 15%;
+    div {
+        border: solid 5px white;
+        text-align: center;
+        font-size: 200px;
+        font-weight: bold;
+        font-family: 'Alexandria', sans-serif;;
+        color: white;
+        line-height: 400px;
+        width: 400px;
+        height: 400px;
+        &:nth-child(1) {
+            background-color: $colorC;
+            animation-name: ani1;
+            animation-duration: 1.5s;
+            @include animations;
+            }
+        &:nth-child(2) {
+            background-color: $colorS1;
+            animation-name: ani2;
+            animation-duration: 3s;
+            @include animations;
+        }
+        &:nth-child(3) {
+            background-color: $colorS2;
+            animation-name: ani3;
+            animation-duration: 4.5s;
+            @include animations;
+        }
+    }
+}
+
+@keyframes ani1 {
+    from {
+        transform: translate(0px, -1000px);
+    }
+    to {}
+}
+
+@keyframes ani2 {
+    from {
+        transform: translate(0px, -1500px);
+    }
+    to {}
+}
+
+@keyframes ani3 {
+    from {
+        transform: translate(0px, -2000px);
+    }
+    to {}   
+}

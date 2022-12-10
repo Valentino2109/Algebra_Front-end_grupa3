@@ -1,0 +1,91 @@
+h1 {
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+img {
+    border: solid 5px red;
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.cards {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    height: 300px;
+    width: 200px;
+}
+
+.cards:hover .pic-1 {
+    transform: rotate(35deg) translate(150px, -100px);
+}
+
+.pic-1 {
+    transition: rotate;
+}
+
+.pic-1:hover {
+    rotate: -35deg;
+    z-index: 200;
+}
+
+.cards:hover .pic-2 {
+    transform: rotate(12deg) translate(80px, -80px);
+}
+
+.pic-2 {
+    transition: rotate;
+}
+
+.pic-2:hover {
+    rotate: -12deg;
+    z-index: 200;
+}
+
+.cards:hover .pic-3 {
+    transform: rotate(-15deg) translate(10px, -60px);
+}
+
+.pic-3 {
+    transition: rotate;
+}
+
+.pic-3:hover {
+    rotate: 15deg;
+    z-index: 200;
+}
+
+.cards:hover .pic-4 {
+    transform: rotate(-30deg) translate(-60px, -80px);
+}
+
+.pic-4 {
+    transition: rotate;
+}
+
+.pic-4:hover {
+    rotate: 30deg;
+    z-index: 200;
+}
+
+.cards:hover .pic-5 {
+    transform: rotate(-50deg) translate(-130px, -100px);
+}
+
+.pic-5 {
+    transition: rotate;
+}
+
+.pic-5:hover {
+    rotate: 50deg;
+    z-index: 200;
+}

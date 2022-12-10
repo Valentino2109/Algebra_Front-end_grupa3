@@ -1,0 +1,44 @@
+#green {
+    border: solid green;
+    height: 100px;
+    width: 300px;
+}
+
+#blue-big {
+    border: solid blue;
+    position: absolute;
+    bottom: 0;
+    height: 400px;
+    width: 600px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#red-square {
+    border: solid red;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+#red-circle {
+    border: solid red;
+    position: absolute;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    right: 0;
+    bottom: 0;
+}
+
+p {
+    border: solid orange;
+}

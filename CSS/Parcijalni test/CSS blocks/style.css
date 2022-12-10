@@ -1,0 +1,97 @@
+body {
+  background-image: url(./blur-clean.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-top: 15%;
+}
+#container div {
+  border: solid 5px white;
+  text-align: center;
+  font-size: 200px;
+  font-weight: bold;
+  font-family: "Alexandria", sans-serif;
+  color: white;
+  line-height: 400px;
+  width: 400px;
+  height: 400px;
+}
+#container div:nth-child(1) {
+  background-color: rgba(65, 65, 65, 0.5);
+  -webkit-animation-name: ani1;
+          animation-name: ani1;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+#container div:nth-child(2) {
+  background-color: rgba(150, 47, 47, 0.5);
+  -webkit-animation-name: ani2;
+          animation-name: ani2;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+#container div:nth-child(3) {
+  background-color: rgba(209, 124, 28, 0.5);
+  -webkit-animation-name: ani3;
+          animation-name: ani3;
+  -webkit-animation-duration: 4.5s;
+          animation-duration: 4.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes ani1 {
+  from {
+    transform: translate(0px, -1000px);
+  }
+}
+
+@keyframes ani1 {
+  from {
+    transform: translate(0px, -1000px);
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    transform: translate(0px, -1500px);
+  }
+}
+@keyframes ani2 {
+  from {
+    transform: translate(0px, -1500px);
+  }
+}
+@-webkit-keyframes ani3 {
+  from {
+    transform: translate(0px, -2000px);
+  }
+}
+@keyframes ani3 {
+  from {
+    transform: translate(0px, -2000px);
+  }
+}/*# sourceMappingURL=style.css.map */

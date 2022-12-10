@@ -1,0 +1,73 @@
+* {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+/* 1st container  */
+
+.container1 {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.item-logo {
+    background-color: rgb(170, 190, 255);
+    font-size: 20px;
+    width: 50%;
+}
+
+.item-slika {
+    background-color: rgb(170, 190, 255);
+    font-size: 20px;
+    width: 50%;
+    flex-basis: 100%;
+}
+
+
+/* Menu item */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.item-menu {
+    background-color: greenyellow;
+    font-size: 20px;
+    height: 20px;
+    width: 60%;
+}
+
+
+/* 2nd container */
+
+.container2 {
+    display: flex;
+    margin-top: 0px;
+    justify-content: center;
+ }
+
+.item-aside {
+    background-color: orange;
+    font-size: 20px;
+    width: 20%;
+    height: 100px;
+    line-height: 180px;
+}
+
+.item-main {
+    background-color: orange;
+    font-size: 20px;
+    width: 60%;
+    height: 100px;
+}
+
+.item-aside2 {
+    background-color: orange;
+    font-size: 20px;
+    width: 20%;
+    height: 100px;
+}

@@ -1,0 +1,27 @@
+body {
+    background-image: url(./hacker-photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+ #homepage-arrow {
+    color: white;
+ }
+
+ h1 {
+    text-align: right;
+    color: white;
+    margin-right: 10%;
+    font-size: 80px;
+ }
+
+ .username,.password {
+    color: white; 
+    font-size: 25px;
+}
+
+ #form1 {
+    text-align: right;
+    margin-right: 10%;
+ }

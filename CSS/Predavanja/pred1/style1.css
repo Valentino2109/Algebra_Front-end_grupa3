@@ -1,0 +1,29 @@
+/* h1 {
+    color: red;
+  }
+
+.zeleni-tekst {
+    color: green;
+    background-color: rosybrown;
+}
+
+#plavi-tekst {
+    color: blue;
+    background-color: aquamarine;
+}
+
+a:visited {
+    color: rgb(212, 189, 44);
+ }
+
+ a:active {
+    color: pink;
+ }
+
+ p:nth-child(even) {
+    color: rgb(213, 14, 177);
+ } */
+
+ p:first-of-type {
+    color: brown;
+ }

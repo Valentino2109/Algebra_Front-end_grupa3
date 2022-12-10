@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      #kratica1 {
+        position: relative;
+      }
+    </style>
+    <script>
+      var stvoren = false;
+      var prikazan = false;
+      function prikazi(event) {
+        if (!stvoren) {
+          var tag = document.createElement("span");
+          tag.innerHTML = "Svjetska zdravstvena organizacija";
+          tag.setAttribute("id", "objasnjenje");
+          tag.style.position = "absolute";
+          tag.style.minWidth = "max content";
+          tag.style.backgroundColor = "teal";
+          tag.style.top = "-20px";
+          tag.style.left = "-20px";
+          event.target.appendChild(tag);
+          stvoren = true;
+          prikazan = true;
+        } else if (!prikazan) {
+          document.getElementById("objasnjenje").style.display = "";
+          prikazan = true;
+        }
+      }
+      function sakrij(event) {
+        if (stvoren) {
+          document.getElementById("objasnjenje").style.display = "none";
+          prikazan = false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a href="./index.html">Vrati se na pocetnu stranicu</a><br /><br />
+
+    <p>
+      The
+      <span
+        onmouseleave="sakrij(event)"
+        onmouseenter="prikazi(event)"
+        id="kratica1"
+        >WHO</span
+      >
+      was founded in 1948.
+    </p>
+  </body>
+</html>
