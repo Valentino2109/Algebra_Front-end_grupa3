@@ -23,13 +23,13 @@ body
     div {
         border: solid 5px white;
         text-align: center;
-        font-size: 200px;
+        font-size: 200vw;
         font-weight: bold;
         font-family: 'Alexandria', sans-serif;;
         color: white;
         line-height: 400px;
-        width: 400px;
-        height: 400px;
+        width: 400vw;
+        height: 400vh;
         &:nth-child(1) {
             background-color: $colorC;
             animation-name: ani1;
