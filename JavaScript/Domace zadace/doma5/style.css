@@ -1,0 +1,24 @@
+#search-part {
+    margin-top: 5%;
+    text-align: center;
+}
+
+#main-window {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#main-window > div {
+    size: 50%;
+    padding: 0 20px;
+}
+
+h2,h3 {
+    text-align: center;
+}
+
+#c-Pic {
+    width: 400px;
+}

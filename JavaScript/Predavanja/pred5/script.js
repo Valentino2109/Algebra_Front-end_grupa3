@@ -17,6 +17,7 @@ const handleStrikeToogle = (e) => {
   spanTextElement.classList.toggle(`striked`);
 };
 
+// Funkcija
 const handleItemAdd = () => {
   // dohvati text iz input-a
   // PAZI

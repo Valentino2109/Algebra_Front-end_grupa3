@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Cocktails</title>
+  </head>
+  <body>
+    <div id="search-part">
+      <input
+        id="input"
+        type="textbox"
+        placeholder="Desired cocktail"
+        size="35"
+      />
+      <button id="btn-search">Search</button>
+    </div>
+    <div id="main-window">
+      <!-- Column for cocktail searching -->
+      <div>
+        <h2>Cocktail search 🍹</h3>
+        <ol id="cocktail-list">
+        </ol>
+      </div>
+      <!-- Column for cocktail details -->
+      <div id="cocktail-recipe">
+        <h2>Cocktail recipe 🧾</h2>
+      </div>
+    </div>
+    <script defer src="./script.js"></script>
+  </body>
+</html>
