@@ -8,7 +8,7 @@ const handleDetails = (e) => {
   const detailsBtn = e.target;
 
   // url za detalje koktela + dohvati podatke (APIkey je 1, ne mijenja se za ovaj API)
-  const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${detailsBtn}`;
+  const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${detailsBtn}`;
   const request = new XMLHttpRequest();
   request.open(`GET`, url, true);
 
@@ -22,10 +22,10 @@ const handleDetails = (e) => {
       h3Title.innerText = detailsBtn;
 
       // hvatanje slike
-      const cocktailPicture = responseObject.drink[0].strImageSource;
+      const cocktailPicture = responseObject.drink.strImageSource;
 
       // hvatanje instrukcija
-      const cocktailInstructions = responseObject.drink[0].strInstructions;
+      const cocktailInstructions = responseObject.drink.strInstructions;
       const newParagraph = document.createElement(`p`);
       newParagraph.innerText = cocktailInstructions;
 
@@ -37,9 +37,9 @@ const handleDetails = (e) => {
       const newUL = document.createElement(`ul`);
 
       // hvatanje sastojaka
-      const cocktailIngredient1 = responseObject.drink[0].strIngredient1;
-      const cocktailIngredient2 = responseObject.drink[0].strIngredient2;
-      const cocktailIngredient3 = responseObject.drink[0].strIngredient3;
+      const cocktailIngredient1 = responseObject.drink.strIngredient1;
+      const cocktailIngredient2 = responseObject.drink.strIngredient2;
+      const cocktailIngredient3 = responseObject.drink.strIngredient3;
 
       // dodaci unutar novog UL
       const newLI1 = document.createElement(`li`);
