@@ -4,49 +4,61 @@ const cocktailList = document.querySelector(`#cocktail-list`);
 const cocktailRecipe = document.querySelector(`#cocktail-recipe`);
 
 // funkcija za details button
-// kako da povezem OPET s API-jem????
 const handleDetails = (e) => {
   const detailsBtn = e.target;
 
-  // naslov dohvacenog koktela
-  const h3Title = document.createElement(`h3`);
-  h3Title.innerText = drinkName; // kako da ovo dodam...!!!
+  // url za detalje koktela + dohvati podatke (APIkey je 1, ne mijenja se za ovaj API)
+  const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${detailsBtn}`;
+  const request = new XMLHttpRequest();
+  request.open(`GET`, url, true);
 
-  // hvatanje slike
-  const cocktailPicture = responseObject.drink[0].strImageSource;
+  // trazi svojstva koktela (na koji je kliknut)
+  request.onload = () => {
+    if (request.status === 200) {
+      const responseObject = JSON.parse(request.response);
 
-  // hvatanje instrukcija
-  const cocktailInstructions = responseObject.drink[0].strInstructions;
-  const newParagraph = document.createElement(`p`);
-  newParagraph.innerText = cocktailInstructions;
+      // naslov dohvacenog koktela
+      const h3Title = document.createElement(`h3`);
+      h3Title.innerText = detailsBtn;
 
-  // novi h4 za naslov
-  const h4Title = document.createElement(`h4`);
-  h4Title.innerText = `Ingredients:`;
+      // hvatanje slike
+      const cocktailPicture = responseObject.drink[0].strImageSource;
 
-  // novi UL
-  const newUL = document.createElement(`ul`);
+      // hvatanje instrukcija
+      const cocktailInstructions = responseObject.drink[0].strInstructions;
+      const newParagraph = document.createElement(`p`);
+      newParagraph.innerText = cocktailInstructions;
 
-  // hvatanje sastojaka
-  const cocktailIngredient1 = responseObject.drink[0].strIngredient1;
-  const cocktailIngredient2 = responseObject.drink[0].strIngredient2;
-  const cocktailIngredient3 = responseObject.drink[0].strIngredient3;
+      // novi h4 za naslov
+      const h4Title = document.createElement(`h4`);
+      h4Title.innerText = `Ingredients:`;
 
-  // dodaci unutar novog UL
-  const newLI1 = document.createElement(`li`);
-  const newLI2 = document.createElement(`li`);
-  const newLI3 = document.createElement(`li`);
-  newLI1.innerText = cocktailIngredient1;
-  newLI2.innerText = cocktailIngredient2;
-  newLI3.innerText = cocktailIngredient3;
+      // novi UL
+      const newUL = document.createElement(`ul`);
 
-  // dodaj sve dohvacene elemente u "Cocktail recipe" div
-  cocktailRecipe.appendChild(h3Title);
-  cocktailRecipe.appendChild(cocktailPicture);
-  cocktailRecipe.appendChild(newParagraph);
-  cocktailRecipe.appendChild(h4Title);
-  cocktailRecipe.appendChild(newUL);
-  newUL.appendChild(newLI1, newLI2, newLI3);
+      // hvatanje sastojaka
+      const cocktailIngredient1 = responseObject.drink[0].strIngredient1;
+      const cocktailIngredient2 = responseObject.drink[0].strIngredient2;
+      const cocktailIngredient3 = responseObject.drink[0].strIngredient3;
+
+      // dodaci unutar novog UL
+      const newLI1 = document.createElement(`li`);
+      const newLI2 = document.createElement(`li`);
+      const newLI3 = document.createElement(`li`);
+      newLI1.innerText = cocktailIngredient1;
+      newLI2.innerText = cocktailIngredient2;
+      newLI3.innerText = cocktailIngredient3;
+
+      // dodaj sve dohvacene elemente u "Cocktail recipe" div
+      cocktailRecipe.appendChild(h3Title);
+      cocktailRecipe.appendChild(cocktailPicture);
+      cocktailRecipe.appendChild(newParagraph);
+      cocktailRecipe.appendChild(h4Title);
+      cocktailRecipe.appendChild(newUL);
+      newUL.appendChild(newLI1, newLI2, newLI3);
+    }
+  };
+  request.send();
 };
 
 // funkcija za Search button
