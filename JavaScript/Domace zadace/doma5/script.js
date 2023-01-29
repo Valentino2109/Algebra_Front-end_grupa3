@@ -10,13 +10,13 @@ const handleDetails = (e) => {
 
   // naslov dohvacenog koktela
   const h3Title = document.createElement(`h3`);
-  h3Title.innerText = `drinkName`; // kako da ovo dodam...!!!
+  h3Title.innerText = drinkName; // kako da ovo dodam...!!!
 
   // hvatanje slike
-  const cocktailPicture = responseObject.drink.strImageSource;
+  const cocktailPicture = responseObject.drink[0].strImageSource;
 
   // hvatanje instrukcija
-  const cocktailInstructions = responseObject.drink.strInstructions;
+  const cocktailInstructions = responseObject.drink[0].strInstructions;
   const newParagraph = document.createElement(`p`);
   newParagraph.innerText = cocktailInstructions;
 
@@ -28,9 +28,9 @@ const handleDetails = (e) => {
   const newUL = document.createElement(`ul`);
 
   // hvatanje sastojaka
-  const cocktailIngredient1 = responseObject.drink.strIngredient1;
-  const cocktailIngredient2 = responseObject.drink.strIngredient2;
-  const cocktailIngredient3 = responseObject.drink.strIngredient3;
+  const cocktailIngredient1 = responseObject.drink[0].strIngredient1;
+  const cocktailIngredient2 = responseObject.drink[0].strIngredient2;
+  const cocktailIngredient3 = responseObject.drink[0].strIngredient3;
 
   // dodaci unutar novog UL
   const newLI1 = document.createElement(`li`);
@@ -65,7 +65,7 @@ function handleSearchCocktails() {
       const responseObject = JSON.parse(request.response);
 
       // povuci koktel
-      const drinkName = responseObject.drinks.strDrink;
+      const drinkName = responseObject.drinks[0].strDrink;
 
       // napravi novi list item u "cocktail-list"
       const listNameDrink = document.createElement(`li`);
