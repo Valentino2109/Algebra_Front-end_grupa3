@@ -4,7 +4,7 @@ const cocktailList = document.querySelector(`#cocktail-list`);
 const cocktailRecipe = document.querySelector(`#cocktail-recipe`);
 
 // funkcija za details button
-const handleDetails = (e) => {
+const handleDetails = () => {
   const detailsBtn = e.target;
 
   // url za detalje koktela + dohvati podatke (APIkey je 1, ne mijenja se za ovaj API)
@@ -73,11 +73,12 @@ function handleSearchCocktails() {
 
   // trazi koktele
   request.onload = () => {
-    if (request.status === 200) {
+    if (request.status) {
       const responseObject = JSON.parse(request.response);
 
       // povuci koktel
       const drinkName = responseObject.drinks[0].strDrink;
+      const idDrink = responseObject.drinks[0].idDrink;
 
       // napravi novi list item u "cocktail-list"
       const listNameDrink = document.createElement(`li`);
@@ -86,7 +87,11 @@ function handleSearchCocktails() {
       // napravi novi button za informacije o koktelu
       const detailsBtn = document.createElement(`button`);
       detailsBtn.innerText = `Details`;
-      detailsBtn.addEventListener(`click`, handleDetails);
+      // detailsBtn.addEventListener(`click`, handleDetails);
+
+      detailsBtn.addEventListener(`click`, function () {
+        handleDetails(idDrink);
+      });
 
       // dodaj novi list item u "cocktail-list"
       cocktailList.appendChild(listNameDrink);

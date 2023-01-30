@@ -1,0 +1,11 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(244, 243, 224, 1) 79%
+  );
+}
+
+#list {
+  list-style-type: square;
+}
