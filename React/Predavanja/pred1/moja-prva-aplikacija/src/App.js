@@ -1,8 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
+import randomstring from "randomstring";
 
 function App() {
-  return <div>Radi</div>;
+  return <div>{randomstring.generate()}</div>;
 }
 
 export default App;
