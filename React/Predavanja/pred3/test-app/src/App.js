@@ -1,5 +1,15 @@
+import ShowText from "./Components/ShowText";
+import ShowClassText from "./Components/ShowClassText";
+
 function App() {
-  return <div>App.js</div>;
+  return (
+    <div>
+      <>
+        <ShowText />
+        <ShowClassText />
+      </>
+    </div>
+  );
 }
 
 export default App;
