@@ -1,0 +1,29 @@
+#div__main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.div__one {
+  border: solid rgb(136, 136, 255) 10px;
+  border-radius: 20px;
+  width: 30%;
+}
+
+.div__two {
+  border: solid rgb(136, 255, 156) 10px;
+  border-radius: 20px;
+  width: 30%;
+}
+
+.div__three {
+  border: solid rgb(255, 136, 201) 10px;
+  border-radius: 20px;
+  width: 30%;
+}
+
+.div__four {
+  border: solid rgba(238, 255, 0, 0.76) 10px;
+  border-radius: 20px;
+  width: 30%;
+}
