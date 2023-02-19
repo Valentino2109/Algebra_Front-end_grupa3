@@ -14,5 +14,5 @@ class ShowClassText extends React.Component {
 
 export default ShowClassText;
 
-// postaviti proptpes za pomoc === line 5
+// postaviti proptpes za pomoc === line 4
 // rucno sve napisati u funkciji
